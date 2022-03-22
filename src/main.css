@@ -21,6 +21,11 @@ legend,
     display: none;
 } */
 
+.jumbotron {
+    background-color: #235490;
+    color: #fff;
+}
+
 .form-control {
     width: 60%;
 }
@@ -50,4 +55,10 @@ legend,
 .login-container,
 .live_chat_buttons_container {
     width: 23em;
+}
+
+@media (min-width: 576px) {
+    .jumbotron {
+        padding: 2rem 2rem;
+    }
 }

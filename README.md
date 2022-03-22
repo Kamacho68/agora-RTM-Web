@@ -1,4 +1,4 @@
-# Agora Web REal Time Messaging (RTM) - Webpack
+# Agora Web Real Time Messaging (RTM) - Webpack
 
 This tutorial shows you how to quickly integrate Agora Web RTM SDK with the Agora sample app.
 This demo contains following features:

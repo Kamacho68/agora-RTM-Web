@@ -5,9 +5,6 @@ import config from './config';
 var Config = require('./config'),
     conf = new Config();
 
-// console.log('====> Agora RTM sdk version: ' + AgoraRTC.VERSION + ' compatible: ' + AgoraRTM.checkSystemRequirements());
-console.log('Troubleshooting conf.appId', conf.appId + ' > ' + conf.channel);
-
 // Initialize client
 const client = AgoraRTM.createInstance(conf.appId);
 
@@ -21,7 +18,6 @@ let channel = null;
 // Client Event listeners
 // Display messages from peer
 client.on('MessageFromPeer', function(message, peerId) {
-    // console.log('Troubleshooting message from peer', JSON.parse(JSON.stringify(message)).text);
     document.getElementById("log").appendChild(document.createElement('div')).append("Message from: " + peerId + " Message: " + JSON.parse(JSON.stringify(message)).text);
 });
 // Display connection state changes
@@ -67,7 +63,6 @@ window.onload = function() {
     // create and join channel
     document.getElementById("join").onclick = async function(event) {
         event.preventDefault();
-        console.log('Troubelshooting join');
         // Channel event listeners
         // Display channel messages
         await channel.join().then(() => {
@@ -91,7 +86,6 @@ window.onload = function() {
                     el.value = opt;
                     select.appendChild(el);
                 }
-                console.log('Troubleshooting memberNames', memberNames);
             });
         });
     }
@@ -99,7 +93,6 @@ window.onload = function() {
     // leave channel
     document.getElementById("leave").onclick = async function(event) {
         event.preventDefault();
-        console.log('Troubelshooting Leave');
         if (channel != null) {
             await channel.leave();
             disableButton(document.querySelector('[id="leave"]'));
@@ -149,11 +142,9 @@ async function channelInit() {
 
 
     conf.channel = (!!document.querySelector('[id="channel"]').value) ? document.querySelector('[id="channel"]').value : conf.channel;
-    console.log('Troubleshooting channelInit ', conf.channel);
     channel = client.createChannel(conf.channel);
 
     channel.on('ChannelMessage', function(message, memberId) {
-        // console.log('Troubleshooting Channel message', JSON.parse(JSON.stringify(message)).text);
         document.getElementById("log").appendChild(document.createElement('div')).append("Channel Message received from: " + memberId + " Message: " + JSON.parse(JSON.stringify(message)).text);
     });
     // Display channel member stats
@@ -171,7 +162,6 @@ async function channelInit() {
                 el.value = opt;
                 select.appendChild(el);
             }
-            console.log('Troubleshooting memberNames', memberNames);
         });
     });
     // Display channel member stats
@@ -189,7 +179,6 @@ async function channelInit() {
                 el.value = opt;
                 select.appendChild(el);
             }
-            console.log('Troubleshooting memberNames', memberNames);
         });
     });
 }

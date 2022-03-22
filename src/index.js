@@ -25,7 +25,6 @@ client.on('ConnectionStateChanged', function(state, reason) {
     document.getElementById("log").appendChild(document.createElement('div')).append("Current State: " + state + " Status: " + reason);
 });
 
-
 window.onload = function() {
 
     document.querySelector('[id="live_chat_buttons_container"]').style.display = 'none';

@@ -51,5 +51,6 @@ To build and run the sample application, get an App ID:
 
 ## Resources
 
+- You can find a full article describing how to create a basic project and use the [Agora RTM SDK](https://docs.agora.io/en/Real-time-Messaging/messaging_web?platform=Web) to send and receive messages on the web platform.
 - You can find full API document at [Document Center](https://docs.agora.io/en/)
 - You can file bugs about this demo at [issue](https://github.com/AgoraIO/RTM/issues)

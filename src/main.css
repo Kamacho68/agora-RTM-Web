@@ -1,0 +1,53 @@
+/* .form-group {
+    width: 60%;
+}
+
+.input-group .mb-3 {
+    padding-left: 15px;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 33.333333%;
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+}
+
+legend,
+.mb-3,
+.my-3,
+#log {
+    padding-left: 15px;
+}
+
+.channel-container {
+    display: none;
+} */
+
+.form-control {
+    width: 60%;
+}
+
+.btn-block {
+    width: 60%;
+}
+
+.text-center {
+    text-align: left!important;
+}
+
+.p-5 {
+    padding: 1rem!important;
+}
+
+#agora-container {
+    display: flex;
+}
+
+.live_chat_messages_container {
+    display: grid!important;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 50em;
+}
+
+.login-container,
+.live_chat_buttons_container {
+    width: 23em;
+}

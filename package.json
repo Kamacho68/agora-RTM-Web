@@ -1,0 +1,31 @@
+{
+    "name": "real-time-messaging",
+    "version": "1.0.0",
+    "description": "",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "dev": "webpack serve",
+        "start": "node server.js",
+        "build": "webpack --mode production"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@babel/core": "^7.17.8",
+        "@babel/preset-env": "^7.16.11",
+        "@webpack-cli/serve": "^1.6.1",
+        "agora-rtm-sdk": "^1.4.4",
+        "babel-loader": "^8.2.3",
+        "css-loader": "^6.7.1",
+        "html-loader": "^3.1.0",
+        "html-webpack-plugin": "^5.5.0",
+        "style-loader": "^3.3.1",
+        "webpack": "^5.70.0",
+        "webpack-cli": "^4.9.2",
+        "webpack-dev-server": "^4.7.4"
+    },
+    "dependencies": {
+        "express": "^4.17.3"
+    }
+}
